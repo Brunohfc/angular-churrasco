@@ -1,0 +1,84 @@
+alimentos"[
+    "cortesBovinos"[
+       {
+          {
+             "corte":"Picanha"
+          },
+          {
+             "corte":"Alcatra"
+          },
+          {
+             "corte":"Contra-file"
+          },
+          {
+             "corte":"Cupim"
+          },
+          {
+             "corte":"File Mignon"
+          }
+       }
+    ]"suina"[
+       {
+          {
+             "corte":"Costela Suína"
+          },
+          {
+             "corte":"Lombo Suíno"
+          },
+          {
+             "corte":"Picanha Suína"
+          },
+          {
+             "corte":"Maminha Suína"
+          },
+          {
+             "corte":"Carré Suína"
+          }
+       }
+    ]"cortesFrangos"[
+       {
+          {
+             "corte":"Coração de Frango"
+          },
+          {
+             "corte":"Sobrecoxa"
+          },
+          {
+             "corte":"Linguiça de frango"
+          },
+          {
+             "corte":"Asinha de frango"
+          }
+       }
+    ]"acompanhamentos"[
+       {
+          {
+             "acompanhamento":"Arroz"
+          },
+          {
+             "acompanhamento":"Feijão Tropeiro"
+          },
+          {
+             "acompanhamento":"Mandioca"
+          },
+          {
+             "acompanhamento":"Pão de alho"
+          }
+       }
+    ]"bebidas"[
+       {
+          {
+             "bebida":"Água"
+          },
+          {
+             "bebida":"Refrigerante"
+          },
+          {
+             "bebida":"Cerveja"
+          },
+          {
+             "bebida":"Suco"
+          }
+       }
+    ]
+ ]

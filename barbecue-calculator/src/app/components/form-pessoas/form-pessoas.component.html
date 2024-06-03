@@ -1,0 +1,92 @@
+
+
+<form [formGroup]="barbecue" (ngSubmit)="onSubmit()">
+
+    <fieldset>
+        <legend>Quantidade de pessoas: </legend>
+        <label for="qtdAdultos"></label>
+        Adultos: <input type="number" [placeholder]="0" formControlName="adultos"
+             #valorAd (keyup)="qtdAdultos(valorAd.value)">
+                <p>{{valorAdultos}}</p>
+            
+        <label for="qtdCriancas"></label>
+        Crianças: <input type="number" [placeholder]="0" formControlName="criancas"
+             #valor (keyup)="qtdCriancas(valor.value)">
+        
+    </fieldset>
+    <p>{{valorCriancas}} </p>
+        
+
+        <fieldset>
+
+            <legend>Tipos de cortes:</legend>
+            <label for="cortes"></label>
+            <section class="cortes">
+                
+                <section class="cortesBovinos" formGroupName="cortesBovinos">
+                    <h2>Cortes Bovinos:</h2>
+                    
+                    Picanha<input     type="checkbox" formControlName="picanha"    name="picanha"     id="picanha">
+                    Alcatra<input     type="checkbox" formControlName="alcatra"    name="Alcatra"     id="Alcatra">
+                    Contra-file<input type="checkbox" formControlName="contraFile" name="Contra-file" id="Contra-file">
+                    Cupim<input       type="checkbox" formControlName="cupim"      name="Cupim"       id="Cupim">
+                    File Mignon<input type="checkbox" formControlName="fileMignon" name="File Mignon" id="File Mignon">
+                        
+                </section>
+                
+                <section class="cortesSuinos" formGroupName="cortesSuinos">
+                    <h2>Cortes Suinos</h2>
+                    
+                    Costela Suína<input type="checkbox"  formControlName="costelaSuina"  name="CostelaSuina" id="CostelaSuina" >
+                    Lombo Suíno<input   type="checkbox"  formControlName="lomboSuina"    name="LomboSuino"   id="LomboSuino" >
+                    Picanha Suína<input type="checkbox"  formControlName="picanhaSuina"  name="PicanhaSuina" id="PicanhaSuina" >
+                    Maminha Suína<input type="checkbox"  formControlName="maminhaSuina"  name="MaminhaSuina" id="MaminhaSuina" >
+                    Carré Suína<input   type="checkbox"  formControlName="carreSuina"    name="CarreSuina"   id="CarreSuina" >
+                    
+                </section>
+
+                <section class="cortesFrango" formGroupName="cortesFrango">
+                    <h2>Cortes de Frango</h2>
+                    
+                    Coração de Frango<input  type="checkbox"   formControlName="coracaoFrango"   name="Coração de Frango"  id="Coração de Frango">
+                    Sobrecoxa<input          type="checkbox"   formControlName="sobrecoxa"       name="Sobrecoxa"          id="Sobrecoxa">
+                    Linguiça de frango<input type="checkbox"   formControlName="linguicaFrango"  name="Linguiça de frango" id="Linguiça de frango">
+                    Asinha de frango<input   type="checkbox"   formControlName="asinhaFrango"    name="Asinha de frango"   id="Asinha de frango">
+                    
+                </section>
+
+            </section>
+                
+            
+        </fieldset>
+
+        <section class="acompanhamentos" formGroupName="acompanhamentos">
+            <fieldset>
+                <legend>Acompanhamentos:</legend>
+                <label for="acompanhamentos">
+                    Arroz <input           type="checkbox" name="Arroz"            formControlName="arroz"           name="arroz"           id="Arroz">
+                    Feijão Tropeiro <input type="checkbox" name="Feijão Tropeiro"  formControlName="feijaoTropeiro"  name="Feijao Tropeiro" id="Feijão Tropeiro">
+                    Mandioca <input        type="checkbox" name="Mandioca"         formControlName="mandioca"        name="Mandioca"        id="Mandioca">
+                    Pão de alho <input     type="checkbox" name="Pão de alho"      formControlName="paoDeAlho"       name="Pao de alho"     id="Pao de alho">
+                </label>
+            </fieldset>
+        </section>
+
+        <section formGroupName="bebidas">
+        <fieldset>
+            <legend>Bebidas:</legend>
+            
+            Água <input         type="checkbox"  formControlName="agua"          name="agua"         id="agua">
+            Refrigerante <input type="checkbox"  formControlName="refrigerante"  name="Refrigerante" id="Refrigerante">
+            Cerveja <input      type="checkbox"  formControlName="cerveja"       name="Cerveja"      id="Cerveja">
+            Suco <input         type="checkbox"  formControlName="suco"          name="Suco"         id="Suco">
+            
+        </fieldset>
+        </section>
+        <p>{{barbecue.valid}}</p>
+        <button type="submit" [disabled]="!barbecue.valid">Calcular Churrasco</button>
+    </form>
+    <hr>
+    <p>{{processedData.adultos}}</p>
+    <hr>
+    <p>{{processedData.criancas}}</p>
